@@ -55,9 +55,9 @@ nav:
     - Gestion de projet: cahier-des-charges/10-gestion-projet.md
     - Livrables: cahier-des-charges/11-livrables.md
     - Planning: cahier-des-charges/12-planning.md
-    - Planning: cahier-des-charges/13-Budget-et-ressources.md
-    - Planning: cahier-des-charges/14-Maintenance-et-évolutions-futures.md
-    - Conclusion: cahier-des-charges/13-conclusion.md
+    - Budget-et-ressources: cahier-des-charges/13-Budget-et-ressources.md
+    - Maintenance-et-évolutions-futures: cahier-des-charges/14-Maintenance-et-évolutions-futures.md
+    - Conclusion: cahier-des-charges/15-conclusion.md
   - Conception:
     - Architecture: conception/architecture.md
     - Maquettes: conception/maquettes.md
