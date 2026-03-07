@@ -1,0 +1,77 @@
+site_name: Gestion du temps - Institut paramédical
+site_description: Documentation complète du projet d'application de gestion du temps
+site_author: Votre Équipe
+repo_url: https://github.com/votre-organisation/gestion-temps-paramedical
+repo_name: GitHub
+
+theme:
+  name: material
+  language: fr
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - toc.integrate
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Passer au mode sombre
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch
+        name: Passer au mode clair
+
+plugins:
+  - search
+  - mermaid2
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed
+  - toc:
+      permalink: true
+
+nav:
+  - Accueil: index.md
+  - Cahier des charges:
+    - Introduction: cahier-des-charges/01-introduction.md
+    - Objectifs: cahier-des-charges/02-objectifs.md
+    - Périmètre fonctionnel: cahier-des-charges/03-perimetre-fonctionnel.md
+    - Contraintes techniques: cahier-des-charges/04-contraintes-techniques.md
+    - Modèle de données: cahier-des-charges/05-modele-donnees.md
+    - Spécifications interfaces: cahier-des-charges/06-specifications-interfaces.md
+    - UI/UX: cahier-des-charges/07-ui-ux.md
+    - Sécurité: cahier-des-charges/08-securite.md
+    - Développement: cahier-des-charges/09-developpement.md
+    - Gestion de projet: cahier-des-charges/10-gestion-projet.md
+    - Livrables: cahier-des-charges/11-livrables.md
+    - Planning: cahier-des-charges/12-planning.md
+    - Conclusion: cahier-des-charges/13-conclusion.md
+  - Conception:
+    - Architecture: conception/architecture.md
+    - Maquettes: conception/maquettes.md
+    - Choix techniques: conception/choix-techniques.md
+  - Guide d'installation: guide-installation.md
+  - Manuel utilisateur:
+    - Direction: manuel-utilisateur/direction.md
+    - Enseignant: manuel-utilisateur/enseignant.md
+    - Étudiant: manuel-utilisateur/etudiant.md
+    - Responsable stages: manuel-utilisateur/responsable-stages.md
+  - Tests:
+    - Plan de tests: tests/plan-de-tests.md
+    - Cas de tests: tests/cas-de-tests.md
+  - API: api/documentation-api.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/votre-organisation
