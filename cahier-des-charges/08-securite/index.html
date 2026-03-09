@@ -77,6 +77,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#8-securite-et-gestion-des-acces" class="md-skip">
+          Aller au contenu
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -693,6 +698,8 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -835,7 +842,63 @@
   
   
     <li class="md-nav__item">
-      <a href="../13-conclusion/" class="md-nav__link">
+      <a href="../13-Budget-et-ressources/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Budget-et-ressources
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../14-Maintenance-et-%C3%A9volutions-futures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Maintenance-et-évolutions-futures
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../15-conclusion/" class="md-nav__link">
         
   
   
@@ -1366,9 +1429,19 @@
   
 
 
-  <h1>Sécurité</h1>
-
-
+<h1 id="8-securite-et-gestion-des-acces">8. Sécurité et gestion des accès<a class="headerlink" href="#8-securite-et-gestion-des-acces" title="Permanent link">&para;</a></h1>
+<ul>
+<li><strong>Authentification</strong> : email + mot de passe (avec réinitialisation possible).</li>
+<li><strong>Autorisations basées sur les rôles</strong> (RBAC) :</li>
+<li>Administrateur : tout.</li>
+<li>Direction : création/modification des séances, gestion des groupes, modules, salles, contraintes, consultation de tous les plannings.</li>
+<li>Responsable stages : gestion des stages, indisponibilités des étudiants, consultation des cours.</li>
+<li>Enseignant permanent : consultation de son planning, modification de ses indisponibilités, visualisation des groupes/modules dont il a la charge.</li>
+<li>Enseignant vacataire : consultation de son planning, modification de ses indisponibilités (simplifié).</li>
+<li>Étudiant : consultation de son planning uniquement.</li>
+<li>Contrôle au niveau des vues pour chaque requête sensible.</li>
+<li>Journalisation des actions critiques (logs conservés 1 an).</li>
+</ul>
 
 
 

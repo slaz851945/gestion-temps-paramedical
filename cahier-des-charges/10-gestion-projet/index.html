@@ -77,6 +77,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#10-methodologie-de-gestion-de-projet" class="md-skip">
+          Aller au contenu
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -749,6 +754,26 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gestion de projet
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -766,6 +791,47 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#phases-du-projet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phases du projet
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#livraison-et-suivi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Livraison et suivi
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -835,7 +901,63 @@
   
   
     <li class="md-nav__item">
-      <a href="../13-conclusion/" class="md-nav__link">
+      <a href="../13-Budget-et-ressources/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Budget-et-ressources
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../14-Maintenance-et-%C3%A9volutions-futures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Maintenance-et-évolutions-futures
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../15-conclusion/" class="md-nav__link">
         
   
   
@@ -1366,9 +1488,57 @@
   
 
 
-  <h1>Gestion de projet</h1>
-
-
+<h1 id="10-methodologie-de-gestion-de-projet">10. Méthodologie de gestion de projet<a class="headerlink" href="#10-methodologie-de-gestion-de-projet" title="Permanent link">&para;</a></h1>
+<p>Le développement suivra une approche itérative et incrémentale (type Agile) avec des sprints de 2 à 3 semaines. Cette méthodologie permet une livraison progressive des fonctionnalités, une adaptation continue aux retours et une maîtrise des risques.</p>
+<h2 id="phases-du-projet">Phases du projet<a class="headerlink" href="#phases-du-projet" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>Cadrage, conception détaillée et maquettage UI/UX</strong> (3 semaines) :</li>
+<li>Validation du cahier des charges.</li>
+<li>Maquettage des écrans principaux (wireframes puis mockups).</li>
+<li>Tests utilisateurs sur prototypes.</li>
+<li>
+<p>Choix techniques définitifs.</p>
+</li>
+<li>
+<p><strong>Mise en place de l'environnement</strong> (1 semaine) :</p>
+</li>
+<li>Dépôt Git, structure du projet.</li>
+<li>
+<p>Base de données, conteneurisation Podman, intégration continue.</p>
+</li>
+<li>
+<p><strong>Développement itératif (6 sprints)</strong> (15 semaines) :</p>
+</li>
+<li>Sprint 1 : Authentification, gestion des rôles, CRUD des référentiels de base.</li>
+<li>Sprint 2 : Module de planification simplifiée (calendrier, création de séances, détection basique de conflits).</li>
+<li>Sprint 3 : Gestion des examens et des stages.</li>
+<li>Sprint 4 : Moteur de contraintes pédagogiques et workflow de validation.</li>
+<li>Sprint 5 : Génération de documents (PDF, Excel, iCal) et notifications.</li>
+<li>
+<p>Sprint 6 : Finalisation, optimisation, tests avancés.</p>
+</li>
+<li>
+<p><strong>Tests et recette</strong> (3 semaines) :</p>
+</li>
+<li>Tests unitaires et fonctionnels.</li>
+<li>Recette utilisateur avec jeu de données réel.</li>
+<li>
+<p>Corrections et ajustements.</p>
+</li>
+<li>
+<p><strong>Formation et déploiement</strong> (2 semaines) :</p>
+</li>
+<li>Formation des super-utilisateurs.</li>
+<li>Documentation utilisateur.</li>
+<li>Déploiement pilote puis généralisé avec Podman.</li>
+</ol>
+<p><strong>Total estimé : 24 semaines (environ 6 mois)</strong>.</p>
+<h2 id="livraison-et-suivi">Livraison et suivi<a class="headerlink" href="#livraison-et-suivi" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Chaque sprint donne lieu à une démonstration des fonctionnalités développées.</li>
+<li>Un tableau de bord (type Trello ou GitHub Projects) suit l'avancement des user stories.</li>
+<li>Les spécifications détaillées et les comptes rendus de réunion sont conservés dans le dossier <code>docs/</code>.</li>
+</ul>
 
 
 

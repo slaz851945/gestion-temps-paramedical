@@ -77,6 +77,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#5-modele-de-donnees-principales-entites" class="md-skip">
+          Aller au contenu
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -609,6 +614,8 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -835,7 +842,63 @@
   
   
     <li class="md-nav__item">
-      <a href="../13-conclusion/" class="md-nav__link">
+      <a href="../13-Budget-et-ressources/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Budget-et-ressources
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../14-Maintenance-et-%C3%A9volutions-futures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Maintenance-et-évolutions-futures
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../15-conclusion/" class="md-nav__link">
         
   
   
@@ -1366,9 +1429,23 @@
   
 
 
-  <h1>Modèle de données</h1>
-
-
+<h1 id="5-modele-de-donnees-principales-entites">5. Modèle de données (principales entités)<a class="headerlink" href="#5-modele-de-donnees-principales-entites" title="Permanent link">&para;</a></h1>
+<p><strong>users</strong> : id, email, password_hash, role (admin, direction, resp_stage, enseignant_permanent, enseignant_vacataire, etudiant), nom, prenom, actif, dernière_connexion…</p>
+<p><strong>enseignants</strong> (hérite de users ou table liée) : spécialités, max_heures_semaine, telephone, type (permanent/vacataire)</p>
+<p><strong>etudiants</strong> : id, numero_etudiant, groupe_id, …</p>
+<p><strong>groupes</strong> : id, nom, promotion_id, effectif</p>
+<p><strong>promotions</strong> : id, nom, annee_debut, annee_fin</p>
+<p><strong>salles</strong> : id, nom, type, capacite, equipements (table JSON ou table dédiée equipements)</p>
+<p><strong>modules</strong> : id, code, intitule, volume_horaire, type, enseignant_referent_id, promotion_id, couleur_affichage</p>
+<p><strong>contraintes_pedagogiques</strong> : id, type_contrainte, parametres (JSON), actif</p>
+<p><strong>seances</strong> : id, module_id, type_seance (cours, TD, TP, examen), date, heure_debut, heure_fin, statut (brouillon, publie, verrouille), salle_principale_id</p>
+<p><strong>seances_salles</strong> (pour salles multiples) : seance_id, salle_id</p>
+<p><strong>seances_enseignants</strong> : seance_id, enseignant_id, role (principal, surveillant, etc.)</p>
+<p><strong>seances_groupes</strong> : seance_id, groupe_id</p>
+<p><strong>examens</strong> (hérite de seances) : duree, nb_surveillants_requis, consignes</p>
+<p><strong>stages</strong> : id, etudiant_id, structure_id, date_debut, date_fin, tuteur, statut</p>
+<p><strong>indisponibilites</strong> : id, enseignant_id, date_debut, date_fin, recurrent (règle iCal), motif</p>
+<p><strong>logs_actions</strong> : id, user_id, action, table_concernee, enregistrement_id, timestamp, details (JSON)</p>
 
 
 

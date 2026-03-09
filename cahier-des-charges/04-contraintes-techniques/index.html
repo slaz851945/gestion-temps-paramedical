@@ -77,6 +77,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#4-contraintes-techniques-et-environnement" class="md-skip">
+          Aller au contenu
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -581,6 +586,26 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contraintes techniques
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -598,6 +623,58 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#41-architecture-generale" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1. Architecture générale
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#42-stack-technologique" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2. Stack technologique
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#43-exigences-non-fonctionnelles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3. Exigences non fonctionnelles
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -835,7 +912,63 @@
   
   
     <li class="md-nav__item">
-      <a href="../13-conclusion/" class="md-nav__link">
+      <a href="../13-Budget-et-ressources/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Budget-et-ressources
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../14-Maintenance-et-%C3%A9volutions-futures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Maintenance-et-évolutions-futures
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../15-conclusion/" class="md-nav__link">
         
   
   
@@ -1366,9 +1499,122 @@
   
 
 
-  <h1>Contraintes techniques</h1>
-
-
+<h1 id="4-contraintes-techniques-et-environnement">4. Contraintes techniques et environnement<a class="headerlink" href="#4-contraintes-techniques-et-environnement" title="Permanent link">&para;</a></h1>
+<h2 id="41-architecture-generale">4.1. Architecture générale<a class="headerlink" href="#41-architecture-generale" title="Permanent link">&para;</a></h2>
+<p>Application web architecture client-serveur, accessible via navigateur moderne, responsive (adaptée aux tablettes et smartphones). Multiplateforme.</p>
+<h2 id="42-stack-technologique">4.2. Stack technologique<a class="headerlink" href="#42-stack-technologique" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Composant</th>
+<th>Technologie / Outil</th>
+<th>Justification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Back-end</td>
+<td>Python 3.10+</td>
+<td>Langage mature, riche en bibliothèques</td>
+</tr>
+<tr>
+<td>Framework web</td>
+<td>Flask (avec extensions)</td>
+<td>Léger, flexible, parfait pour un développement modulaire</td>
+</tr>
+<tr>
+<td>ORM</td>
+<td>SQLAlchemy</td>
+<td>Abstraction de la base de données</td>
+</tr>
+<tr>
+<td>Base de données</td>
+<td>PostgreSQL 14+</td>
+<td>Robuste, support des contraintes d'intégrité</td>
+</tr>
+<tr>
+<td>Migrations</td>
+<td>Alembic (Flask-Migrate)</td>
+<td>Gestion versionnée du schéma</td>
+</tr>
+<tr>
+<td>Authentification</td>
+<td>Flask-Login + Flask-Principal</td>
+<td>Gestion des sessions et des rôles</td>
+</tr>
+<tr>
+<td>Formulaires</td>
+<td>Flask-WTF + WTForms</td>
+<td>Validation et protection CSRF</td>
+</tr>
+<tr>
+<td>Tâches asynchrones</td>
+<td>Celery + Redis (optionnel V2)</td>
+<td>Pour envois d'e-mails et générations lourdes</td>
+</tr>
+<tr>
+<td>Front-end</td>
+<td>HTML5, CSS3, Bootstrap 5</td>
+<td>Interface moderne et responsive</td>
+</tr>
+<tr>
+<td>Calendrier interactif</td>
+<td>FullCalendar</td>
+<td>Riche en fonctionnalités, drag &amp; drop, vues multiples</td>
+</tr>
+<tr>
+<td>Graphiques</td>
+<td>Chart.js</td>
+<td>Statistiques d'occupation</td>
+</tr>
+<tr>
+<td>Export PDF</td>
+<td>WeasyPrint</td>
+<td>Génération à partir de templates HTML/CSS</td>
+</tr>
+<tr>
+<td>Export Excel</td>
+<td>OpenPyXL</td>
+<td>Création de fichiers Excel</td>
+</tr>
+<tr>
+<td>Flux iCal</td>
+<td>ics.py</td>
+<td>Génération de calendriers synchronisables</td>
+</tr>
+<tr>
+<td>Serveur web</td>
+<td>Nginx + Gunicorn</td>
+<td>Mise en production</td>
+</tr>
+<tr>
+<td>Conteneurisation</td>
+<td><strong>Podman</strong> (avec podman-compose)</td>
+<td>Alternative légère et sécurisée à Docker</td>
+</tr>
+<tr>
+<td>Versionnement</td>
+<td>Git (dépôt privé)</td>
+<td>Suivi des modifications</td>
+</tr>
+</tbody>
+</table>
+<h2 id="43-exigences-non-fonctionnelles">4.3. Exigences non fonctionnelles<a class="headerlink" href="#43-exigences-non-fonctionnelles" title="Permanent link">&para;</a></h2>
+<p><strong>Sécurité :</strong>
+- Authentification forte (mots de passe hachés avec bcrypt).
+- Gestion fine des droits (RBAC) avec contrôle au niveau des vues.
+- Protection contre les injections SQL (via ORM), CSRF, XSS.
+- Connexions HTTPS obligatoires.
+- Journalisation des actions critiques (logs conservés 1 an).</p>
+<p><strong>Performance :</strong>
+- Temps de réponse &lt; 2 secondes pour les requêtes courantes.
+- Optimisation des requêtes SQL (indexation, jointures).
+- Mise en cache (Redis) pour les données peu volatiles (référentiels).</p>
+<p><strong>Disponibilité :</strong> 99,5 % en période d'utilisation courante.</p>
+<p><strong>Maintenabilité :</strong> Code commenté, respect des conventions PEP 8, documentation technique.</p>
+<p><strong>Évolutivité :</strong> Architecture modulaire permettant d'ajouter de nouveaux modules.</p>
+<p><strong>Ergonomie :</strong> Interface intuitive, navigation simple, aides contextuelles.</p>
+<p><strong>Accessibilité :</strong> Respect partiel des normes RGAA.</p>
 
 
 
