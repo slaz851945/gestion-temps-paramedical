@@ -1,7 +1,38 @@
-
 # Backlog du projet – Gestion du temps
 
 ## 📋 Légende
+- [x] Terminé
+- [ ] En cours / À faire
+
+## ✅ Phase 1 – Authentification et base
+- [x] Structure Flask avec blueprints
+- [x] Modèle User
+- [x] Inscription / Connexion / Déconnexion
+- [x] Internationalisation avec Flask-Babel  en cours 
+- [x] Gestion des rôles et permissions (décorateur @role_required)
+
+## ✅ Phase 2 – Gestion des référentiels
+- [x] CRUD Enseignants
+- [x] CRUD Salles
+- [x] CRUD Promotions
+- [x] CRUD Groupes
+- [x] CRUD Modules
+
+## 🚧 Phase 3 – Planification
+- [ ] Intégration FullCalendar
+- [ ] Modèle Séance
+- [ ] Détection de conflits
+- [ ] ...
+
+## 📦 Prochaines étapes
+- Planification (FullCalendar)
+- Gestion des examens et stages
+- Exports PDF/Excel
+- Tests et documentation utilisateur
+
+
+
+<!-- ## 📋 Légende
 - [ ] À faire
 - [x] Terminé
 
@@ -11,15 +42,15 @@
 - [x] Structure Flask avec blueprints
 - [x] Modèle User
 - [x] Inscription / Connexion / Déconnexion
-- [x] Internationalisation (i18n) – en cours
+- [x] Internationalisation (français/arabe) – en cours
 - [ ] Gestion des rôles et permissions
 - [ ] ...
 
 ### Phase 2 – Gestion des référentiels
-- [ ] CRUD Enseignants
-- [ ] CRUD Salles
-- [ ] CRUD Groupes
-- [ ] CRUD Modules
+- [x] CRUD Enseignants
+- [x] CRUD Salles
+- [x] CRUD Groupes
+- [x] CRUD Modules
 - [ ] ...
 
 ### Phase 3 – Planification
@@ -27,7 +58,7 @@
 - [ ] Modèle Séance
 - [ ] Détection de conflits
 - [ ] ...
-
+ -->
 
 
 <!-- # Backlog du projet Gestion du temps

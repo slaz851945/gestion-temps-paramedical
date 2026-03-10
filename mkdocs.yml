@@ -62,6 +62,11 @@ nav:
     - Architecture: conception/architecture.md
     - Maquettes: conception/maquettes.md
     - Choix techniques: conception/choix-techniques.md
+  - Guides:
+    - CRUD: guides/crud.md
+  - Projet:
+    - Backlog: projet/backlog.md
+    - Changelog: projet/CHANGELOG.md
   - Guide d'installation: guide-installation.md
   - Manuel utilisateur:
     - Direction: manuel-utilisateur/direction.md
