@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block title %}{{ titre }}{% endblock %}
+{% block content %}
+<div class="container">
+    <h1>{{ titre }}</h1>
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        <div class="row">
+            <div class="col-md-6">
+                <div class="mb-3">
+                    {{ form.nom.label(class="form-label") }}
+                    {{ form.nom(class="form-control" + (' is-invalid' if form.nom.errors else '')) }}
+                    {% for error in form.nom.errors %}
+                        <div class="invalid-feedback">{{ error }}</div>
+                    {% endfor %}
+                </div>
+                <div class="mb-3">
+                    {{ form.annee_debut.label(class="form-label") }}
+                    {{ form.annee_debut(class="form-control" + (' is-invalid' if form.annee_debut.errors else '')) }}
+                    {% for error in form.annee_debut.errors %}
+                        <div class="invalid-feedback">{{ error }}</div>
+                    {% endfor %}
+                </div>
+                <div class="mb-3">
+                    {{ form.annee_fin.label(class="form-label") }}
+                    {{ form.annee_fin(class="form-control" + (' is-invalid' if form.annee_fin.errors else '')) }}
+                    {% for error in form.annee_fin.errors %}
+                        <div class="invalid-feedback">{{ error }}</div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        {{ form.submit(class="btn btn-primary") }}
+        <a href="{{ url_for('promotions.index') }}" class="btn btn-secondary">{{ _('Annuler') }}</a>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,19 @@
+bash
+
+flask shell
+>>> from app import db
+>>> db.engine.table_names()
+['users', 'enseignants', 'salles', 'groupes', 'promotions', ...]
+
+
+📌 Résumé des commandes
+Commande	Description
+flask db init	                        Initialise le dossier migrations/ (à faire une seule fois)
+flask db migrate -m "message"   	    Crée un script de migration basé sur les changements des modèles
+flask db upgrade	                    Applique les migrations en attente
+flask db downgrade	                    Annule la dernière migration (utile en cas d'erreur)
+flask db history    	                Affiche l'historique des migrations
+flask db current	                    Affiche la version actuelle de la base de données
+
+Désormais, chaque fois que vous modifiez un modèle, vous utiliserez flask db migrate suivi de flask db upgrade.
+ C'est la bonne pratique professionnelle.

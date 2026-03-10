@@ -1,0 +1,23 @@
+# Environnement virtuel
+venv/
+env/
+ENV/
+
+# Fichiers de configuration locaux
+.env
+*.pyc
+__pycache__/
+
+# Dossiers d'IDE
+.vscode/
+.idea/
+
+# Base de données locale (si vous utilisez SQLite)
+*.db
+*.sqlite3
+
+# Dossier de génération MkDocs
+site/
+
+# Logs
+*.log

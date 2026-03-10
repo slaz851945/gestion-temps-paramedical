@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block title %}{{ _('Liste des salles') }}{% endblock %}
+{% block content %}
+<div class="container">
+    <h1>{{ _('Gestion des salles') }}</h1>
+    <a href="{{ url_for('salles.ajouter') }}" class="btn btn-primary mb-3">{{ _('Ajouter une salle') }}</a>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>{{ _('Nom') }}</th>
+                <th>{{ _('Type') }}</th>
+                <th>{{ _('Capacité') }}</th>
+                <th>{{ _('Équipements') }}</th>
+                <th>{{ _('Actions') }}</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for salle in salles %}
+            <tr>
+                <td>{{ salle.nom }}</td>
+                <td>
+                    {% if salle.type == 'cours' %}{{ _('Cours') }}
+                    {% elif salle.type == 'tp' %}{{ _('TP') }}
+                    {% elif salle.type == 'amphi' %}{{ _('Amphithéâtre') }}
+                    {% elif salle.type == 'simulation' %}{{ _('Simulation') }}
+                    {% endif %}
+                </td>
+                <td>{{ salle.capacite }}</td>
+                <td>
+                    {% if salle.equipements %}
+                        {{ salle.equipements|replace('[', '')|replace(']', '')|replace('"', '') }}
+                    {% endif %}
+                </td>
+                <td>
+                    <a href="{{ url_for('salles.modifier', id=salle.id) }}" class="btn btn-sm btn-warning">{{ _('Modifier') }}</a>
+                    <form action="{{ url_for('salles.supprimer', id=salle.id) }}" method="post" class="d-inline">
+                        <button type="submit" class="btn btn-sm btn-danger" onclick='return confirm("{{ _('Êtes-vous sûr de vouloir supprimer cette salle ?') }}");'>{{ _('Supprimer') }}</button>
+                    </form>
+                </td>
+            </tr>
+            {% else %}
+            <tr>
+                <td colspan="5">{{ _('Aucune salle trouvée.') }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

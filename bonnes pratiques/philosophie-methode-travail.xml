@@ -1,0 +1,37 @@
+✅ Même philosophie de travail
+Développement en local : vous écrivez le code (Python, HTML, CSS, etc.) dans VS Code, exactement comme vous écrivez les fichiers Markdown.
+
+Versionnage avec Git : vous continuez à faire des commits réguliers via l'onglet "Contrôle de code source" de VS Code. Chaque fonctionnalité, correction ou avancement donne lieu à un commit.
+
+Visualisation / test en direct : tout comme mkdocs serve vous donne un aperçu instantané de la documentation, vous aurez un serveur de développement pour l'application (par exemple flask run ou un outil comme nodemon) qui met à jour l'application en direct à chaque modification.
+
+Branches : vous pourrez créer des branches Git pour développer une fonctionnalité spécifique sans impacter la branche principale (main), puis fusionner une fois terminé.
+
+Synchronisation distante (optionnelle) : vous gardez la possibilité de pousser vers GitHub (ou autre) pour sauvegarde, collaboration ou déploiement.
+
+🔧 Outils équivalents pour le code
+bonnes pratiques/image.png
+Phase	Documentation	Code source
+Édition	VS Code + Markdown	VS Code + Python/HTML/JS
+Serveur de développement	mkdocs serve	flask run (ou autre)
+Versionnage	Git (commits locaux)	Git (commits locaux)
+Génération des livrables	mkdocs build (dossier site/)	pip install -r requirements.txt, éventuel build JS
+Tests	(plus tard avec des validateurs de syntaxe)	Tests unitaires (pytest), linting (flake8)
+Déploiement	gh-deploy ou copie des fichiers statiques	Déploiement sur serveur (avec Podman, Gunicorn, etc.)
+🧪 Pendant toutes les phases du projet
+
+Phase de conception : vous documentez dans docs/conception/ (nous avons déjà les fichiers prêts).
+
+Phase de développement : le code source sera dans app/, versionné avec Git. Vous pourrez travailler sur des branches, par exemple feature/authentification, et fusionner avec main quand c'est stable.
+
+Phase de test : les tests (unitaires, intégration) seront écrits dans tests/ et versionnés.
+
+Phase de déploiement : les scripts de déploiement (Podman, etc.) seront également versionnés.
+
+À chaque étape, vous gardez le contrôle local, sans dépendre de GitHub si vous ne le souhaitez pas. GitHub ne devient qu'une option pour partager ou sauvegarder.
+
+🎯 Conclusion
+Vous avez maintenant une méthode de travail professionnelle et homogène qui s'applique à toutes les facettes du projet. Vous pouvez donc aborder la suite avec confiance, en sachant que les bonnes pratiques sont déjà en place.
+
+Souhaitez-vous que nous passions maintenant à la mise en place de la structure pour le code source (dossier app/, environnement virtuel, premier fichier app.py, etc.) ?
+

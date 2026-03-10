@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block title %}{{ _('Liste des promotions') }}{% endblock %}
+{% block content %}
+<div class="container">
+    <h1>{{ _('Gestion des promotions') }}</h1>
+    <a href="{{ url_for('promotions.ajouter') }}" class="btn btn-primary mb-3">{{ _('Ajouter une promotion') }}</a>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>{{ _('Nom') }}</th>
+                <th>{{ _('Année début') }}</th>
+                <th>{{ _('Année fin') }}</th>
+                <th>{{ _('Actions') }}</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for promotion in promotions %}
+            <tr>
+                <td>{{ promotion.nom }}</td>
+                <td>{{ promotion.annee_debut or '-' }}</td>
+                <td>{{ promotion.annee_fin or '-' }}</td>
+                <td>
+                    <a href="{{ url_for('promotions.modifier', id=promotion.id) }}" class="btn btn-sm btn-warning">{{ _('Modifier') }}</a>
+                    <form action="{{ url_for('promotions.supprimer', id=promotion.id) }}" method="post" class="d-inline">
+                        <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('{{ _('Êtes-vous sûr de vouloir supprimer cette promotion ?') }}');">{{ _('Supprimer') }}</button>
+                    </form>
+                </td>
+            </tr>
+            {% else %}
+            <tr>
+                <td colspan="4">{{ _('Aucune promotion trouvée.') }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

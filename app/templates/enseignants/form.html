@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block title %}{{ titre }}{% endblock %}
+{% block content %}
+<div class="container">
+    <h1>{{ titre }}</h1>
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        <div class="row">
+            <div class="col-md-6">
+                <div class="mb-3">
+                    {{ form.email.label(class="form-label") }}
+                    {{ form.email(class="form-control" + (' is-invalid' if form.email.errors else '')) }}
+                    {% for error in form.email.errors %}
+                        <div class="invalid-feedback">{{ error }}</div>
+                    {% endfor %}
+                </div>
+                <div class="mb-3">
+                    {{ form.prenom.label(class="form-label") }}
+                    {{ form.prenom(class="form-control" + (' is-invalid' if form.prenom.errors else '')) }}
+                    {% for error in form.prenom.errors %}
+                        <div class="invalid-feedback">{{ error }}</div>
+                    {% endfor %}
+                </div>
+                <div class="mb-3">
+                    {{ form.nom.label(class="form-label") }}
+                    {{ form.nom(class="form-control" + (' is-invalid' if form.nom.errors else '')) }}
+                    {% for error in form.nom.errors %}
+                        <div class="invalid-feedback">{{ error }}</div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="mb-3">
+                    {{ form.type.label(class="form-label") }}
+                    {{ form.type(class="form-select" + (' is-invalid' if form.type.errors else '')) }}
+                    {% for error in form.type.errors %}
+                        <div class="invalid-feedback">{{ error }}</div>
+                    {% endfor %}
+                </div>
+                <div class="mb-3">
+                    {{ form.specialites.label(class="form-label") }}
+                    {{ form.specialites(class="form-control", placeholder=form.specialites.description) }}
+                </div>
+                <div class="mb-3">
+                    {{ form.max_heures_semaine.label(class="form-label") }}
+                    {{ form.max_heures_semaine(class="form-control" + (' is-invalid' if form.max_heures_semaine.errors else '')) }}
+                    {% for error in form.max_heures_semaine.errors %}
+                        <div class="invalid-feedback">{{ error }}</div>
+                    {% endfor %}
+                </div>
+                <div class="mb-3">
+                    {{ form.telephone.label(class="form-label") }}
+                    {{ form.telephone(class="form-control" + (' is-invalid' if form.telephone.errors else '')) }}
+                    {% for error in form.telephone.errors %}
+                        <div class="invalid-feedback">{{ error }}</div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        {{ form.submit(class="btn btn-primary") }}
+        <a href="{{ url_for('enseignants.index') }}" class="btn btn-secondary">{{ _('Annuler') }}</a>
+    </form>
+</div>
+{% endblock %}

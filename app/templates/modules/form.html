@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% block title %}{{ titre }}{% endblock %}
+{% block content %}
+<div class="container">
+    <h1>{{ titre }}</h1>
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        <div class="row">
+            <div class="col-md-6">
+                <div class="mb-3">
+                    {{ form.code.label(class="form-label") }}
+                    {{ form.code(class="form-control" + (' is-invalid' if form.code.errors else '')) }}
+                    {% for error in form.code.errors %}
+                        <div class="invalid-feedback">{{ error }}</div>
+                    {% endfor %}
+                </div>
+                <div class="mb-3">
+                    {{ form.intitule.label(class="form-label") }}
+                    {{ form.intitule(class="form-control" + (' is-invalid' if form.intitule.errors else '')) }}
+                    {% for error in form.intitule.errors %}
+                        <div class="invalid-feedback">{{ error }}</div>
+                    {% endfor %}
+                </div>
+                <div class="mb-3">
+                    {{ form.type.label(class="form-label") }}
+                    {{ form.type(class="form-select" + (' is-invalid' if form.type.errors else '')) }}
+                    {% for error in form.type.errors %}
+                        <div class="invalid-feedback">{{ error }}</div>
+                    {% endfor %}
+                </div>
+                <div class="mb-3">
+                    {{ form.volume_horaire.label(class="form-label") }}
+                    {{ form.volume_horaire(class="form-control" + (' is-invalid' if form.volume_horaire.errors else '')) }}
+                    {% for error in form.volume_horaire.errors %}
+                        <div class="invalid-feedback">{{ error }}</div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="mb-3">
+                    {{ form.enseignant_referent_id.label(class="form-label") }}
+                    {{ form.enseignant_referent_id(class="form-select" + (' is-invalid' if form.enseignant_referent_id.errors else '')) }}
+                    {% for error in form.enseignant_referent_id.errors %}
+                        <div class="invalid-feedback">{{ error }}</div>
+                    {% endfor %}
+                </div>
+                <div class="mb-3">
+                    {{ form.promotion_id.label(class="form-label") }}
+                    {{ form.promotion_id(class="form-select" + (' is-invalid' if form.promotion_id.errors else '')) }}
+                    {% for error in form.promotion_id.errors %}
+                        <div class="invalid-feedback">{{ error }}</div>
+                    {% endfor %}
+                </div>
+                <div class="mb-3">
+                    {{ form.couleur_affichage.label(class="form-label") }}
+                    {{ form.couleur_affichage(class="form-control form-control-color", style="width: 100px;") }}
+                </div>
+                <div class="mb-3">
+                    {{ form.description.label(class="form-label") }}
+                    {{ form.description(class="form-control" + (' is-invalid' if form.description.errors else ''), rows=3) }}
+                    {% for error in form.description.errors %}
+                        <div class="invalid-feedback">{{ error }}</div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        {{ form.submit(class="btn btn-primary") }}
+        <a href="{{ url_for('modules.index') }}" class="btn btn-secondary">{{ _('Annuler') }}</a>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block title %}{{ _('Liste des modules') }}{% endblock %}
+{% block content %}
+<div class="container">
+    <h1>{{ _('Gestion des modules') }}</h1>
+    <a href="{{ url_for('modules.ajouter') }}" class="btn btn-primary mb-3">{{ _('Ajouter un module') }}</a>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>{{ _('Code') }}</th>
+                <th>{{ _('Intitulé') }}</th>
+                <th>{{ _('Type') }}</th>
+                <th>{{ _('Volume') }}</th>
+                <th>{{ _('Référent') }}</th>
+                <th>{{ _('Promotion') }}</th>
+                <th>{{ _('Actions') }}</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for module in modules %}
+            <tr>
+                <td>{{ module.code }}</td>
+                <td>{{ module.intitule }}</td>
+                <td>
+                    {% if module.type == 'cours' %}{{ _('Cours') }}
+                    {% elif module.type == 'td' %}{{ _('TD') }}
+                    {% elif module.type == 'tp' %}{{ _('TP') }}
+                    {% elif module.type == 'stage' %}{{ _('Stage') }}
+                    {% endif %}
+                </td>
+                <td>{{ module.volume_horaire }}h</td>
+                <td>
+                    {% if module.enseignant_referent %}
+                        {{ module.enseignant_referent.user.prenom }} {{ module.enseignant_referent.user.nom }}
+                    {% else %}
+                        -
+                    {% endif %}
+                </td>
+                <td>{{ module.promotion.nom if module.promotion else '-' }}</td>
+                <td>
+                    <a href="{{ url_for('modules.modifier', id=module.id) }}" class="btn btn-sm btn-warning">{{ _('Modifier') }}</a>
+                    <form action="{{ url_for('modules.supprimer', id=module.id) }}" method="post" class="d-inline">
+                        <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('{{ _('Êtes-vous sûr de vouloir supprimer ce module ?') }}');">{{ _('Supprimer') }}</button>
+                    </form>
+                </td>
+            </tr>
+            {% else %}
+            <tr>
+                <td colspan="7">{{ _('Aucun module trouvé.') }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

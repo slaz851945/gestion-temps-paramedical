@@ -1,0 +1,230 @@
+# Arabic translations for Gestion du temps.
+msgid ""
+msgstr ""
+"Project-Id-Version: Gestion du temps\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2026-03-10 11:08+0100\n"
+"PO-Revision-Date: 2026-03-10 15:00+0100\n"
+"Last-Translator: \n"
+"Language: ar_DZ\n"
+"Language-Team: ar_DZ <LL@li.org>\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : "
+"n%100>=3 && n%100<=10 ? 3 : n%100>=0 && n%100<=2 ? 4 : 5);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: app/decorators.py:25
+msgid "Veuillez vous connecter pour accéder à cette page."
+msgstr "الرجاء تسجيل الدخول للوصول إلى هذه الصفحة."
+
+#: app/forms.py:183
+msgid "L'année de fin doit être supérieure à l'année de début."
+msgstr "يجب أن تكون سنة النهاية أكبر من سنة البداية."
+
+#: app/routes/enseignants.py:49
+msgid "Enseignant ajouté avec succès."
+msgstr "تمت إضافة المدرس بنجاح."
+
+#: app/routes/enseignants.py:51
+msgid "Ajouter un enseignant"
+msgstr "إضافة مدرس"
+
+#: app/routes/enseignants.py:70
+msgid "Enseignant modifié avec succès."
+msgstr "تم تعديل المدرس بنجاح."
+
+#: app/routes/enseignants.py:80
+msgid "Modifier un enseignant"
+msgstr "تعديل مدرس"
+
+#: app/routes/enseignants.py:118
+msgid "Enseignant supprimé avec succès."
+msgstr "تم حذف المدرس بنجاح."
+
+#: app/routes/groupes.py:33
+msgid "Groupe ajouté avec succès."
+msgstr "تمت إضافة الفوج بنجاح."
+
+#: app/routes/groupes.py:35
+msgid "Ajouter un groupe"
+msgstr "إضافة فوج"
+
+#: app/routes/groupes.py:48
+msgid "Groupe modifié avec succès."
+msgstr "تم تعديل الفوج بنجاح."
+
+#: app/routes/groupes.py:50
+msgid "Modifier un groupe"
+msgstr "تعديل فوج"
+
+#: app/routes/groupes.py:59
+msgid "Groupe supprimé avec succès."
+msgstr "تم حذف الفوج بنجاح."
+
+#: app/routes/main.py:16
+msgid "Gestion du temps"
+msgstr "إدارة الوقت"
+
+#: app/routes/main.py:30
+msgid "Langue changée avec succès."
+msgstr "تم تغيير اللغة بنجاح."
+
+#: app/routes/main.py:32
+msgid "Langue non supportée."
+msgstr "اللغة غير مدعومة."
+
+#: app/routes/modules.py:42
+msgid "Module ajouté avec succès."
+msgstr "تمت إضافة الوحدة التعليمية بنجاح."
+
+#: app/routes/modules.py:44
+msgid "Ajouter un module"
+msgstr "إضافة وحدة تعليمية"
+
+#: app/routes/modules.py:62
+msgid "Module modifié avec succès."
+msgstr "تم تعديل الوحدة التعليمية بنجاح."
+
+#: app/routes/modules.py:64
+msgid "Modifier un module"
+msgstr "تعديل وحدة تعليمية"
+
+#: app/routes/modules.py:73
+msgid "Module supprimé avec succès."
+msgstr "تم حذف الوحدة التعليمية بنجاح."
+
+#: app/routes/promotions.py:33
+msgid "Promotion ajoutée avec succès."
+msgstr "تمت إضافة الدفعة بنجاح."
+
+#: app/routes/promotions.py:35
+msgid "Ajouter une promotion"
+msgstr "إضافة دفعة"
+
+#: app/routes/promotions.py:48
+msgid "Promotion modifiée avec succès."
+msgstr "تم تعديل الدفعة بنجاح."
+
+#: app/routes/promotions.py:50
+msgid "Modifier une promotion"
+msgstr "تعديل دفعة"
+
+#: app/routes/promotions.py:59
+msgid "Impossible de supprimer cette promotion car elle est liée à des groupes ou modules."
+msgstr "لا يمكن حذف هذه الدفعة لأنها مرتبطة بأفواج أو وحدات تعليمية."
+
+#: app/routes/promotions.py:63
+msgid "Promotion supprimée avec succès."
+msgstr "تم حذف الدفعة بنجاح."
+
+#: app/routes/salles.py:38
+msgid "Salle ajoutée avec succès."
+msgstr "تمت إضافة القاعة بنجاح."
+
+#: app/routes/salles.py:40
+msgid "Ajouter une salle"
+msgstr "إضافة قاعة"
+
+#: app/routes/salles.py:55
+msgid "Salle modifiée avec succès."
+msgstr "تم تعديل القاعة بنجاح."
+
+#: app/routes/salles.py:60
+msgid "Modifier une salle"
+msgstr "تعديل قاعة"
+
+#: app/routes/salles.py:69
+msgid "Salle supprimée avec succès."
+msgstr "تم حذف القاعة بنجاح."
+
+# Les messages de validation (conservés de votre fichier, ils sont déjà corrects)
+#: venv/Lib/site-packages/flask_wtf/file.py:55
+#: venv/Lib/site-packages/wtforms/validators.py:293
+#: venv/Lib/site-packages/wtforms/validators.py:323
+msgid "This field is required."
+msgstr "هذا الحقل مطلوب."
+
+#: venv/Lib/site-packages/wtforms/validators.py:146
+#, python-format
+msgid "Field must be at least %(min)d character long."
+msgid_plural "Field must be at least %(min)d characters long."
+msgstr[0] "يجب أن يحتوي الحقل على %(min)d حرف على الأقل."
+msgstr[1] "يجب أن يحتوي الحقل على %(min)d أحرف على الأقل."
+msgstr[2] "يجب أن يحتوي الحقل على %(min)d أحرف على الأقل."
+msgstr[3] "يجب أن يحتوي الحقل على %(min)d أحرف على الأقل."
+msgstr[4] "يجب أن يحتوي الحقل على %(min)d أحرف على الأقل."
+msgstr[5] "يجب أن يحتوي الحقل على %(min)d أحرف على الأقل."
+
+#: venv/Lib/site-packages/wtforms/validators.py:152
+#, python-format
+msgid "Field cannot be longer than %(max)d character."
+msgid_plural "Field cannot be longer than %(max)d characters."
+msgstr[0] "لا يمكن أن يتجاوز الحقل %(max)d حرفًا."
+msgstr[1] "لا يمكن أن يتجاوز الحقل %(max)d أحرفًا."
+msgstr[2] "لا يمكن أن يتجاوز الحقل %(max)d أحرفًا."
+msgstr[3] "لا يمكن أن يتجاوز الحقل %(max)d أحرفًا."
+msgstr[4] "لا يمكن أن يتجاوز الحقل %(max)d أحرفًا."
+msgstr[5] "لا يمكن أن يتجاوز الحقل %(max)d أحرفًا."
+
+#: venv/Lib/site-packages/wtforms/validators.py:164
+#, python-format
+msgid "Field must be between %(min)d and %(max)d characters long."
+msgstr "يجب أن يتراوح طول الحقل بين %(min)d و %(max)d حرف."
+
+#: venv/Lib/site-packages/wtforms/validators.py:216
+#, python-format
+msgid "Number must be at least %(min)s."
+msgstr "يجب أن يكون الرقم على الأقل %(min)s."
+
+#: venv/Lib/site-packages/wtforms/validators.py:219
+#, python-format
+msgid "Number must be at most %(max)s."
+msgstr "يجب أن يكون الرقم على الأكثر %(max)s."
+
+#: venv/Lib/site-packages/wtforms/validators.py:222
+#, python-format
+msgid "Number must be between %(min)s and %(max)s."
+msgstr "يجب أن يكون الرقم بين %(min)s و %(max)s."
+
+#: venv/Lib/site-packages/wtforms/validators.py:358
+msgid "Invalid input."
+msgstr "إدخال غير صالح."
+
+#: venv/Lib/site-packages/wtforms/validators.py:422
+msgid "Invalid email address."
+msgstr "البريد الإلكتروني غير صالح."
+
+#: venv/Lib/site-packages/wtforms/validators.py:595
+#, python-format
+msgid "Invalid value, must be one of: %(values)s."
+msgstr "قيمة غير صالحة، يجب أن تكون واحدة من: %(values)s."
+
+#: venv/Lib/site-packages/wtforms/validators.py:631
+#, python-format
+msgid "Invalid value, can't be any of: %(values)s."
+msgstr "قيمة غير صالحة، لا يمكن أن تكون أيًا من: %(values)s."
+
+#: venv/Lib/site-packages/wtforms/fields/choices.py:155
+msgid "Not a valid choice."
+msgstr "اختيار غير صالح."
+
+#: venv/Lib/site-packages/wtforms/csrf/core.py:96
+msgid "Invalid CSRF Token."
+msgstr "رمز CSRF غير صالح."
+
+#: venv/Lib/site-packages/wtforms/csrf/session.py:64
+msgid "CSRF token missing."
+msgstr "رمز CSRF مفقود."
+
+#: venv/Lib/site-packages/wtforms/csrf/session.py:72
+msgid "CSRF failed."
+msgstr "فشل CSRF."
+
+#: venv/Lib/site-packages/wtforms/csrf/session.py:77
+msgid "CSRF token expired."
+msgstr "انتهت صلاحية رمز CSRF."
+
+# Les anciennes entrées (avec #~) ont été supprimées car elles sont déjà incluses dans les nouvelles.
+# Pour éviter les doublons, je ne les ai pas reprises. Si certaines vous manquent, vous pouvez les ajouter.

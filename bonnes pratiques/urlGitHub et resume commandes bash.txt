@@ -1,0 +1,38 @@
+…or create a new repository on the command line
+echo "# gestion-temps-paramedical" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/slaz851945/gestion-temps-paramedical.git
+git push -u origin main
+
+
+…or push an existing repository from the command line
+git remote add origin https://github.com/slaz851945/gestion-temps-paramedical.git
+git branch -M main
+git push -u origin main
+
+
+Résumé des commandes 
+
+bash
+
+# 1. Pour travailler en direct (recommandé)
+      python -m mkdocs serve
+
+# 2. Pour générer les fichiers statiques
+      python -m mkdocs build
+
+# 3. Pour visualiser la version statique avec un serveur local
+
+          cd site
+          python -m http.server 8000
+    # puis ouvrir http://localhost:8000
+
+
+
+
+Maintenant que tout le cahier des charges est rempli, 
+vous pouvez ainsi naviguer dans la documentation 
+comme si elle était en ligne, mais localement.

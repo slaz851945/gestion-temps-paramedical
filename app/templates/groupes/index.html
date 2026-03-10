@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block title %}{{ _('Liste des groupes') }}{% endblock %}
+{% block content %}
+<div class="container">
+    <h1>{{ _('Gestion des groupes') }}</h1>
+    <a href="{{ url_for('groupes.ajouter') }}" class="btn btn-primary mb-3">{{ _('Ajouter un groupe') }}</a>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>{{ _('Nom') }}</th>
+                <th>{{ _('Promotion') }}</th>
+                <th>{{ _('Effectif') }}</th>
+                <th>{{ _('Actions') }}</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for groupe in groupes %}
+            <tr>
+                <td>{{ groupe.nom }}</td>
+                <td>{{ groupe.promotion.nom if groupe.promotion else '' }}</td>
+                <td>{{ groupe.effectif }}</td>
+                <td>
+                    <a href="{{ url_for('groupes.modifier', id=groupe.id) }}" class="btn btn-sm btn-warning">{{ _('Modifier') }}</a>
+                    <form action="{{ url_for('groupes.supprimer', id=groupe.id) }}" method="post" class="d-inline">
+                        <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('{{ _('Êtes-vous sûr de vouloir supprimer ce groupe ?') }}');">{{ _('Supprimer') }}</button>
+                    </form>
+                </td>
+            </tr>
+            {% else %}
+            <tr>
+                <td colspan="4">{{ _('Aucun groupe trouvé.') }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

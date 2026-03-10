@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block title %}{{ _('Liste des enseignants') }}{% endblock %}
+{% block content %}
+<div class="container">
+    <h1>{{ _('Gestion des enseignants') }}</h1>
+    <a href="{{ url_for('enseignants.ajouter') }}" class="btn btn-primary mb-3">{{ _('Ajouter un enseignant') }}</a>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>{{ _('Nom') }}</th>
+                <th>{{ _('Prénom') }}</th>
+                <th>{{ _('Email') }}</th>
+                <th>{{ _('Type') }}</th>
+                <th>{{ _('Spécialités') }}</th>
+                <th>{{ _('Actions') }}</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for enseignant in enseignants %}
+            <tr>
+                <td>{{ enseignant.user.nom }}</td>
+                <td>{{ enseignant.user.prenom }}</td>
+                <td>{{ enseignant.user.email }}</td>
+                <td>{{ 'Permanent' if enseignant.type == 'permanent' else 'Vacataire' }}</td>
+                <td>{{ enseignant.specialites or '' }}</td>
+                <td>
+                    <a href="{{ url_for('enseignants.modifier', id=enseignant.id) }}" class="btn btn-sm btn-warning">{{ _('Modifier') }}</a>
+                    <form action="{{ url_for('enseignants.supprimer', id=enseignant.id) }}" method="post" class="d-inline">
+                          <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('{{ _('Êtes-vous sûr de vouloir supprimer cet enseignant ?') }}');">{{ _('Supprimer') }}</button>
+                     </form>
+               </td>
+          </tr>
+            {% else %}
+            <tr>
+                <td colspan="6">{{ _('Aucun enseignant trouvé.') }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
